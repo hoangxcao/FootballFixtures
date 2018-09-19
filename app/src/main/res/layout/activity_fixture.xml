@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hu.ait.android.footballfixtures.MainActivity">
+
+    <TextView
+        android:id="@+id/tvMatchDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        tools:text="Matchday:" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvMatchDay"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="Date" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:ignore="RelativeOverlap"
+        tools:text="Status" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvStatus"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="Time" />
+
+    <include
+        android:id="@+id/separator_one"
+        layout="@layout/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvDate" />
+
+    <RelativeLayout
+        android:id="@+id/homeTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/separator_one">
+
+        <ImageView
+            android:id="@+id/ivHomeTeam"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:contentDescription="@string/image" />
+
+        <TextView
+            android:id="@+id/tvHomeTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ivHomeTeam"
+            android:layout_toRightOf="@id/ivHomeTeam"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_blue_dark"
+            tools:ignore="RelativeOverlap"
+            tools:text="Home team" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/home"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/secondary_text"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeTeam"
+        android:layout_centerHorizontal="true"
+        android:text="@string/vs"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/secondary_text" />
+
+    <RelativeLayout
+        android:id="@+id/awayTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvVs">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/away"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/secondary_text" />
+
+        <TextView
+            android:id="@+id/tvAwayTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivAwayTeam"
+            android:layout_toStartOf="@id/ivAwayTeam"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_blue_dark"
+            tools:ignore="RelativeOverlap"
+            tools:text="Away team" />
+
+        <ImageView
+            android:id="@+id/ivAwayTeam"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:contentDescription="@string/image" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/separator_two"
+        layout="@layout/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/awayTeam" />
+
+    <TextView
+        android:id="@+id/tvHeadToHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/separator_two"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:text="@string/head_to_head"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHomeTeamWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvHeadToHead"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Home team wins: 5" />
+
+    <TextView
+        android:id="@+id/tvAwayTeamWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvHeadToHead"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Away team wins: 4" />
+
+    <TextView
+        android:id="@+id/tvDraws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHomeTeamWins"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="Draws: 7" />
+
+    <include
+        android:id="@+id/separator_three"
+        layout="@layout/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvDraws" />
+
+    <ListView
+        android:id="@+id/lvHeadToHeadFixtures"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/separator_three"
+        android:drawSelectorOnTop="false" />
+
+</RelativeLayout>

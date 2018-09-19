@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FootballFixtures</string>
+    <string name="title_home">Home</string>
+    <string name="title_tables">Tables</string>
+
+    <string name="no_matches_today">No matches today.</string>
+    <string name="image">IMAGE</string>
+    <string name="home">(home)</string>
+    <string name="vs">VS.</string>
+    <string name="away">(away)</string>
+    <string name="head_to_head">Head to Head</string>
+    <string name="pj">PJ</string>
+    <string name="gf">GF</string>
+    <string name="ga">GA</string>
+    <string name="dif">DIF.</string>
+    <string name="pts">PTS</string>
+    <string name="players">Players</string>
+    <string name="share">Share</string>
+</resources>
